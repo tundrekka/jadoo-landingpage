@@ -36,6 +36,9 @@ const GlobalStyle = createGlobalStyle`
     display: inline-block;
     cursor: pointer;
   }
+  p {
+    margin: 2px 0;
+  }
   .next-link__button {
     a {
       padding: 8px 18px;

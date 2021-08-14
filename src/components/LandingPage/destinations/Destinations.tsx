@@ -1,13 +1,13 @@
 import { SectionTitle } from "components/common/SectionTitle"
-import { DestinationCard } from "./DestinationCard"
+import { DestinationCards } from "./DestinationCards"
 
 export const Destinations: React.FC = () => {
    return (
       <div style={{marginTop: '6rem'}}>
          <SectionTitle title="Top Destinations" subtitle="Top Selling" />
-         <div className="three-imgs">
-            <DestinationCard />
-         </div>
+         <DestinationCards />
+         <p style={{marginTop: '4rem'}}>Margin</p>
+
       </div>
    )
 }

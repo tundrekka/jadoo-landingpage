@@ -6,8 +6,6 @@ export const Destinations: React.FC = () => {
       <div style={{marginTop: '6rem'}}>
          <SectionTitle title="Top Destinations" subtitle="Top Selling" />
          <DestinationCards />
-         <p style={{marginTop: '4rem'}}>Margin</p>
-
       </div>
    )
 }

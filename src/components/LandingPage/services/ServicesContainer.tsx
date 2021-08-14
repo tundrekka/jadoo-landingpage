@@ -66,12 +66,18 @@ const Desc = styled.p`
    line-height: 162%;
    text-align: center;
    color: ${({ theme }) => theme.palette.text_clr};
+   max-width: 185px;
+   margin: 0 auto;
 `
 
 const Card = styled.div`
    text-align: center;
    max-width: 220px;
    margin: 0px auto 50px auto;
+
+   padding: .5rem;
+   padding-top: 0px;
+
    ${Box} {
       margin-bottom: 34px;
    }

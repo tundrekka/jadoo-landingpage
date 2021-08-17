@@ -8,7 +8,7 @@ const DynamicRightSplash = dynamic(
    {ssr: false}
 )
 
-const Container = styled.div`
+const Container = styled.section`
    margin-top: 8.25rem;
    position: relative;
 `

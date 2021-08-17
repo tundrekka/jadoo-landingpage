@@ -1,5 +1,7 @@
+import Toast from 'components/ui/Toast'
 import NextLink from 'next/link'
 import styled from 'styled-components'
+import { useToast } from 'hooks/useToast'
 
 const ButtonNavLink = styled.span`
    /* a next link */
@@ -10,6 +12,8 @@ const ButtonNavLink = styled.span`
    }
 `
 export const NavLinks: React.FC = () => {
+   const { setState } = useToast()
+
    return (
       <ul>
          <li>
@@ -24,13 +28,30 @@ export const NavLinks: React.FC = () => {
          <li>
             <NextLink href="/booking">Booking</NextLink>
          </li>
-         <li><a>Login</a></li>
+         <li>
+            <a
+               onClick={() => {
+                  setState(true)
+               }}
+            >
+               Login
+            </a>
+         </li>
          <li>
             <ButtonNavLink>
-               <NextLink href="/register">Sign up</NextLink>
+               <a
+                  onClick={() => {
+                     setState(true)
+                  }}
+               >
+                  Sign up
+               </a>
             </ButtonNavLink>
          </li>
-         <li><a>EN</a></li>
+         <li>
+            <a>EN</a>
+         </li>
+         <Toast />
       </ul>
    )
 }

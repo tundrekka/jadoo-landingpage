@@ -2,6 +2,7 @@ import { memo } from 'react'
 import styled from 'styled-components'
 import dynamic from 'next/dynamic'
 import { breakpoints, DEVICE } from 'theme/breakpoints'
+import { useToast } from 'hooks/useToast'
 // import { TravellerImg } from 'components/LandingPage/hero/TravellerImg'
 
 const DinamycImg = dynamic(
@@ -136,15 +137,14 @@ const PlayButton = styled.div`
    font-family: Poppins, Oxygen, Roboto, Ubuntu, Cantarell, 'Open Sans',
       'Helvetica Neue', sans-serif;
    margin-left: 2.75rem;
-   @media screen and (max-width: ${breakpoints.sm}) {
-      margin-left: 1rem;
-   }
+
    display: flex;
    align-items: center;
    cursor: pointer;
    color: #686d77;
-   &:hover {
-      background: #e6e6e6;
+
+   @media screen and (max-width: ${breakpoints.sm}) {
+      margin-left: 1rem;
    }
    .icon-cont {
       position: relative;
@@ -163,6 +163,8 @@ const ImgAbsolute = styled.img`
 `
 
 export const HeroContent: React.FC = memo(() => {
+
+   const {setState} = useToast()
 
    return (
       <Container>
@@ -183,7 +185,9 @@ export const HeroContent: React.FC = memo(() => {
 
             <CTAContainer>
                <FindMoreButton>Find out more</FindMoreButton>
-               <PlayButton>
+               <PlayButton onClick={() => {
+                     setState(true)
+                  }}>
                   <div className="icon-cont">
                      <ImgAbsolute src="/static/play-icon.png" alt="" />
                   </div>

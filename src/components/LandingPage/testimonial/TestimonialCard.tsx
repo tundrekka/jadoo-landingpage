@@ -1,6 +1,7 @@
 import { IconButton } from '@material-ui/core'
 import { KeyboardArrowDown, KeyboardArrowUp } from '@material-ui/icons'
 import styled from 'styled-components'
+import { IUserTestimonial } from './Testimonial'
 
 const CardContainer = styled.div`
    /* border: 1px solid black; */
@@ -54,7 +55,7 @@ const MainCard = styled.div`
       background: #ffffff;
       z-index: 10;
       border-radius: 10px;
-      box-shadow: 0 7px 9.25px rgba(0, 0, 0, 0.075);
+      box-shadow: 0 9px 11.25px rgba(0, 0, 0, 0.075);
    }
 `
 
@@ -63,7 +64,7 @@ const PreviewNextTestimonial = styled.div`
    position: absolute;
 
    /* TODO problems with bottom in % */
-   bottom: -28.8%;
+   bottom: -80px;
    right: -31px;
    border: 1.5px solid #e7e7e7d7;
    padding: 34px;
@@ -88,13 +89,13 @@ const PaginationButtons = styled.div`
 `
 
 interface TestimonialCardProps {
-   text?: string
-   author?: string
-   location?: string
-   imageUrl?: string
+   userTestimonial: IUserTestimonial
+   paginationIdx: number
+   setPaginationIdx: any
 }
 
-export const TestimonialCard: React.FC<TestimonialCardProps> = ({}) => {
+export const TestimonialCard: React.FC<TestimonialCardProps> = ({userTestimonial, paginationIdx, setPaginationIdx}) => {
+   
    return (
       <CardContainer>
          <MainCard>
@@ -109,12 +110,10 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({}) => {
                </div>
                <div className="content">
                   <p className="opinion">
-                     “On the Windows talking painted pasture yet its express
-                     parties use. Sure last upon he same as knew next. Of
-                     believed or diverted no.”
+                     {userTestimonial.text}
                   </p>
-                  <p className="author">Myke taylor</p>
-                  <p className="country">Lahore, Pakistan</p>
+                  <p className="author">{userTestimonial.author}</p>
+                  <p className="country">{userTestimonial.location}</p>
                </div>
             </div>
             <PreviewNextTestimonial>
@@ -125,10 +124,23 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({}) => {
 
          <Pagination>
             <PaginationButtons>
-               <IconButton>
+               <IconButton onClick={() => {
+                  if(paginationIdx < 2 && paginationIdx !== 0 ) {
+                     setPaginationIdx( paginationIdx - 1)
+                  } else {
+                     setPaginationIdx( 0 )
+                  }
+               }}>
                   <KeyboardArrowUp fontSize="large" />
                </IconButton>
-               <IconButton>
+               <IconButton onClick={() => {
+                  if(paginationIdx < 2 ) {
+                     setPaginationIdx( paginationIdx + 1)
+                  } else {
+
+                     setPaginationIdx( 0 )
+                  }
+               }}>
                   <KeyboardArrowDown fontSize="large" />
                </IconButton>
             </PaginationButtons>

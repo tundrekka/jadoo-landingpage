@@ -3,9 +3,9 @@ import { HeroContent } from "./HeroContent"
 
 export const Hero: React.FC = () => {
    return (
-      <div>
+      <section>
          <Decore />
          <HeroContent />
-      </div>
+      </section>
    )
 }

@@ -1,3 +1,4 @@
+import { useToast } from 'hooks/useToast'
 import { FormEvent } from 'react'
 import styled from 'styled-components'
 import { MUI_MQuery } from 'theme/breakpoints'
@@ -117,8 +118,11 @@ const EmailField = styled.div`
 
 export const Suscribe: React.FC = () => {
 
+   const { setState } = useToast()
+
    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault()
+      setState(true)
    }
 
    return (

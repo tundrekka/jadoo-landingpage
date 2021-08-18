@@ -2,8 +2,8 @@ import styled from "styled-components"
 
 const RightSplashBox = styled.div`
    position: absolute;
-   right: 0;
-   top: 0;
+   right: -34px;
+   top: -6px;
 `
 
 const RightSplash: React.FC = () => {

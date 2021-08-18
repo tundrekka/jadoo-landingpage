@@ -18,7 +18,7 @@ export const DestinationCards: React.FC = () => {
                   imgsrc="/static/destinations/romesi.png"
                   destiny="Rome, Italy"
                   price="$5,42k"
-                  tripDuration="10 days trip"
+                  tripDuration="10 Days Trip"
                />
          </Grid>
 
@@ -27,7 +27,7 @@ export const DestinationCards: React.FC = () => {
                imgsrc="/static/destinations/london.jpg"
                destiny="London, UK"
                price="$4,2k"
-               tripDuration="12 days trip"
+               tripDuration="12 Days Trip"
             />
          </Grid>
 
@@ -36,7 +36,7 @@ export const DestinationCards: React.FC = () => {
                imgsrc="/static/destinations/fulleurope.png"
                destiny="Full Europe"
                price="$15k"
-               tripDuration="28 days trip"
+               tripDuration="28 Days Trip"
                decore={true}
             />
          </Grid>

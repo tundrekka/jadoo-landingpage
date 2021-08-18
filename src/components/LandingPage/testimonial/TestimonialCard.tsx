@@ -5,13 +5,11 @@ import { MUI_MQuery } from 'theme/breakpoints'
 import { IUserTestimonial } from './Testimonial'
 import NextImg from 'next/image'
 const CardContainer = styled.div`
-   /* border: 1px solid black; */
    margin-bottom: 5rem;
    display: flex;
    justify-content: space-between;
 
    .img-container {
-      /* border: 1px solid blue; */
       border-radius: 50%;
       width: 68px;
       height: 68px;
@@ -30,6 +28,8 @@ const CardContainer = styled.div`
       max-width: 420px;
       ${MUI_MQuery.sm`
          padding: 4.5rem;
+         padding-top: 0;
+         padding-bottom: 1.875rem;
       `}
       .opinion {
          margin-bottom: 30px;

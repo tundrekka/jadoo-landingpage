@@ -59,7 +59,7 @@ const Title = styled.h4`
    color: ${({ theme }) => theme.palette.text_heading};
 `
 const Desc = styled.p`
-   font-family: Poppins;
+   font-family: Poppins, sans-serif, -apple-system;
    font-style: normal;
    font-weight: 500;
    font-size: 1rem;
@@ -85,7 +85,7 @@ const Card = styled.div`
 
 export const ServicesContainer: React.FC = () => {
    return (
-      <Grid style={{marginTop: '4rem'}} container justifyContent="space-between">
+      <Grid style={{marginTop: '6.7rem'}} container justifyContent="space-between">
          <Grid item xs={12} sm={6} md={3}>
             <Card>
                <Box className="icon">

@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { MUI_MQuery } from "theme/breakpoints"
-
+import NextImg from 'next/image'
 interface ValueProps {
    iconPath: string
    title: string
@@ -13,12 +13,13 @@ const Container = styled.div`
    &:first-of-type {
       margin-top: 2rem;
    }
-   .icon {
-      margin-right: 1rem;
-   }
+   /* .icon {
+      margin-right: 1rem !important;
+   } */
 `
 
 const Texts = styled.div`
+   margin-left: 1rem;
    font-family: Poppins;
    font-weight: bold;
    font-size: 1rem;
@@ -38,7 +39,7 @@ const Texts = styled.div`
 export const Value: React.FC<ValueProps> = ({iconPath, title, description}) => {
    return (
       <Container>
-         <img className="icon" src={iconPath} alt="" />
+         <NextImg width={47} height={48} className="icon" src={iconPath} alt="icon" />
          <Texts>
             <p className="title">{title}</p>
             <p className="description">{description}</p>

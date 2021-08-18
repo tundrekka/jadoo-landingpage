@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import dynamic from 'next/dynamic'
 import { breakpoints, DEVICE } from 'theme/breakpoints'
 import { useToast } from 'hooks/useToast'
+import LightSpeed from 'react-reveal/LightSpeed';
 // import { TravellerImg } from 'components/LandingPage/hero/TravellerImg'
 
 const DinamycImg = dynamic(
@@ -54,11 +55,13 @@ const RightSide = styled.div`
 `
 
 const Tagline = styled.p`
-   font-family: Poppins;
+   font-family: Poppins, -apple-system, Roboto, 'Open Sans', sans-serif;
    font-style: normal;
    font-weight: bold;
    font-size: 1.25rem;
    text-transform: uppercase;
+   margin-top: 1rem;
+   margin-bottom: 1.5rem;
 
    color: ${({ theme }) => theme.palette.primary};
 
@@ -100,7 +103,7 @@ const BigTitle = styled.h1`
 `
 
 const Desc = styled.p`
-   font-family: Poppins;
+   font-family: Poppins, -apple-system, Roboto, 'Open Sans', sans-serif;
    font-style: normal;
    font-weight: 500;
    font-size: 1rem;
@@ -125,7 +128,7 @@ const FindMoreButton = styled.a`
    color: #ffffff;
    border-radius: 10px;
    cursor: pointer;
-   font-family: OpenSans, 'Open Sans', -apple-system, Roboto, Oxygen, Ubuntu,
+   font-family: 'Open Sans', 'Open Sans', -apple-system, Roboto, Oxygen, Ubuntu,
       'Open Sans', 'Helvetica Neue', sans-serif;
    font-style: normal;
    font-size: 1.125rem;
@@ -169,8 +172,9 @@ export const HeroContent: React.FC = memo(() => {
    return (
       <Container>
          <LeftSide>
-            <Tagline>Best destinations around the world</Tagline>
-
+            <LightSpeed left>
+               <Tagline>Best destinations around the world</Tagline>
+            </LightSpeed>
             <TitleContainer>
                <BigTitle>
                   Travel<EnjoySpan>, enjoy</EnjoySpan> and live a new and full

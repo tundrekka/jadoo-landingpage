@@ -1,11 +1,18 @@
-import { SectionTitle } from "components/common/SectionTitle"
-import { DestinationCards } from "./DestinationCards"
+import { SectionTitle } from 'components/common/SectionTitle'
+import { DestinationCards } from './DestinationCards'
+import Fade from 'react-reveal/Fade'
 
 export const Destinations: React.FC = () => {
    return (
-      <div style={{marginTop: '6rem'}}>
-         <SectionTitle title="Top Destinations" subtitle="Top Selling" />
+      <section style={{ marginTop: '8.25rem' }}>
+         <Fade>
+            <SectionTitle
+               capitalize
+               title="Top Destinations"
+               subtitle="Top Selling"
+            />
+         </Fade>
          <DestinationCards />
-      </div>
+      </section>
    )
 }

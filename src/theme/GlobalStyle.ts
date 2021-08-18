@@ -46,21 +46,21 @@ const GlobalStyle = createGlobalStyle`
     border-radius: 4px;
     }
   }
-  @font-face {
+  /* @font-face {
     font-family: Volkhov;
     src: url(/static/fonts/Volkhov-Bold.ttf);
   }
   @font-face {
     font-family: Poppins;
     src: url(/static/fonts/Poppins-Medium.ttf);
-  }
+  } */
   /* @font-face {
     font-family: 'Open Sans';
-    src: url(/static/fonts/OpenSans-Light.ttf);
+    src: url(/static/fonts/'Open Sans'-Light.ttf);
   } */
-  @font-face {
-    font-family: OpenSans;
-    src: url(/static/fonts/OpenSans-SemiBold.ttf);
+  h1,h2,h3,h4 {
+    font-family: Volkhov, Oxygen, Roboto, Ubuntu, Cantarell, 'Open Sans';
+
   }
 `
 export default GlobalStyle

@@ -3,7 +3,9 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "start-local": "next start -H 192.168.0.102",
+    "dev-local": "next -H 192.168.0.102"
   },
   "dependencies": {
     "@material-ui/core": "^4.12.3",
@@ -13,6 +15,7 @@
     "react-bootstrap": "^2.0.0-beta.4",
     "react-dom": "^17.0.2",
     "react-is": "^17.0.2",
+    "react-reveal": "^1.2.2",
     "react-scroll-motion": "^0.2.1",
     "styled-components": "^5.3.0"
   },

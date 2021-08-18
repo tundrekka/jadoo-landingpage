@@ -2,7 +2,7 @@
 const Destinations: React.FC = () => {
    return (
       <div>
-         Destinations Page
+         <h2 style={{marginTop: '3rem', textAlign: 'center'}}>Destinations</h2>
       </div>
    )
 }

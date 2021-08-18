@@ -96,7 +96,7 @@ export const CountryCard: React.FC<CardProps> = ({
             width={300}
             height={310}
             src={imgsrc}
-            alt=""
+            alt="country image"
          />
          <Content>
             <span>{destiny}</span>

@@ -1,11 +1,11 @@
 
 const TravellerImg: React.FC = () => {
 
-   // if(window.innerWidth < 700) return <span>NoImg</span>
+   if(window.innerWidth < 900) return null
 
    return (
       <div>
-         <img src="/static/rigthsidepng.png" alt="" />
+         <img src="/static/rigthsidepng.png" alt="traveller girl" />
       </div>
    )
 }

@@ -37,7 +37,7 @@ export const Testimonial: React.FC = () => {
    const [paginationIdx, setPaginationIdx] = useState(0)
 
    return (
-      <div>
+      <section>
          <Grid container>
             <Grid item xs={12} md={5}>
                <SectionTitle
@@ -55,6 +55,6 @@ export const Testimonial: React.FC = () => {
                />
             </Grid>
          </Grid>
-      </div>
+      </section>
    )
 }

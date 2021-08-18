@@ -28,22 +28,22 @@ export const OutBound: React.FC = () => {
       <>
          <Social>
             <a className="social-icon">
-               <img src="/static/footer/fb.svg" alt="" />
+               <img src="/static/footer/fb.svg" alt="facebook icon" />
             </a>
             <a className="social-icon">
-               <img src="/static/footer/ig.png" alt="" />
+               <img src="/static/footer/ig.png" alt="instagram icon" />
             </a>
             <a className="social-icon">
-               <img src="/static/footer/twitter.svg" alt="" />
+               <img src="/static/footer/twitter.svg" alt="twitter icon" />
             </a>
          </Social>
          <DiscoverApp>
             <p>Discover Our App</p>
             <a className="googleplay-button">
-               <img src="/static/footer/googleplay.svg" alt="" />
+               <img src="/static/footer/googleplay.svg" alt="google-play button" />
             </a>
             <a className="button">
-               <img src="/static/footer/applebutton.svg" alt="" />
+               <img src="/static/footer/applebutton.svg" alt="applestore button" />
             </a>
          </DiscoverApp>
 

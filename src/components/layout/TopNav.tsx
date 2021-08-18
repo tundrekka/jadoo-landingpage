@@ -12,7 +12,7 @@ const Container = styled.div`
    z-index: 5;
 `
 const Navigation = styled.div`
-   font-family: OpenSans, Roboto, sans-serif, Oxygen, 'Open Sans',
+   font-family: 'Open Sans', Roboto, sans-serif, Oxygen, 'Open Sans',
       'Helvetica Neue', sans-serif;
    background: transparent;
    margin-left: auto;

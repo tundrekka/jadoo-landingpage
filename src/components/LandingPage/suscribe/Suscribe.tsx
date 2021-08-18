@@ -5,6 +5,7 @@ import { MUI_MQuery } from 'theme/breakpoints'
 
 const SectionContainer = styled.section`
    position: relative;
+   margin-bottom: 11.2rem;
 
    .main {
       position: relative;
@@ -19,9 +20,13 @@ const SectionContainer = styled.section`
 
       .sendicon {
          position: absolute;
-         top: -13px;
-         right: -20px;
+         top: -26px;
+         right: -40px;
          z-index: 10;
+         ${MUI_MQuery.sm`
+            top: -13px;
+            right: -20px;
+         `}
       }
 
       .right-circles,
@@ -66,7 +71,7 @@ const Content = styled.div`
       font-size: 2.063rem;
       line-height: 164%;
       text-align: center;
-      color: ${({theme}) => theme.palette.text_clr};
+      color: ${({ theme }) => theme.palette.text_clr};
    }
 `
 
@@ -79,16 +84,18 @@ const Form = styled.form`
       background: linear-gradient(180deg, #ff946d 0%, #ff7d68 100%);
       border-radius: 10px;
       padding: 21px 50px;
-      font-family: OpenSans;
+      font-family: 'Open Sans';
       color: #ffffff;
       font-weight: 600;
       font-size: 1.063rem;
       line-height: 1.438rem;
       text-align: center;
       border: none;
+      cursor: pointer;
+      z-index: 25;
+      position: relative;
       margin-top: 0.625rem;
       margin-inline: 1.25rem;
-
    }
 `
 
@@ -117,7 +124,6 @@ const EmailField = styled.div`
 `
 
 export const Suscribe: React.FC = () => {
-
    const { setState } = useToast()
 
    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {

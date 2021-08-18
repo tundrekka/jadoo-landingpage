@@ -1,7 +1,12 @@
-import { useState } from "react"
-import styled from "styled-components"
-import { NavLinks } from "./NavLinks"
-
+import styled from 'styled-components'
+import MenuIcon from '@material-ui/icons/Menu'
+// import CloseIcon from '@material-ui/icons/Close';
+import { useState } from 'react'
+import { IconButton } from '@material-ui/core'
+import { NavLinks } from './NavLinks'
+import { useRouter } from 'next/dist/client/router'
+import { useRef } from 'react'
+import { useEffect } from 'react'
 const Navigation = styled.div`
    width: 100vw;
    height: 100vh;
@@ -11,16 +16,15 @@ const Navigation = styled.div`
    position: fixed;
    background-color: aliceblue;
    z-index: 100;
-   font-family: OpenSans, Roboto, sans-serif, Oxygen, 'Open Sans';
+   font-family: 'Open Sans', Roboto, sans-serif, Oxygen, 'Open Sans';
    display: flex;
    justify-content: center;
    align-items: center;
-   transition: transform .5s ease-in-out;
+   transition: transform 0.5s ease-in-out;
    &.show {
-      transition: transform .35s ease-in-out;
+      transition: transform 0.35s ease-in-out;
 
       transform: translateY(0%);
-
    }
    ul {
       display: flex;
@@ -30,29 +34,47 @@ const Navigation = styled.div`
       li {
          font-size: 1.06rem;
          & > a {
-            padding: .5rem .1rem;
+            padding: 0.5rem 0.1rem;
          }
       }
    }
 `
 
-const CloseButton = styled.button`
-   position: absolute; 
-   top: 60px;
-   right: 75px;
-`
+// const CloseButton = styled(IconButton)`
+//    position: absolute !important;
+//    top: 60px;
+//    right: 75px;
+// `
 
 export const MobileNav: React.FC = () => {
    const [showMenu, setShowMenu] = useState(false)
+   const router = useRouter()
+   const lastPath = useRef(router.pathname)
+
+   useEffect(() => {
+      if(lastPath.current !== router.pathname) {
+         lastPath.current = router.pathname
+         setShowMenu(false)
+      }
+   }, [router.pathname])
    return (
-      <div style={{zIndex: 1000}}>
-         <button style={{zIndex: 200}} onClick={() => setShowMenu(!showMenu)}>XXXXX</button>
+      <div style={{ zIndex: 1000 }}>
+         <IconButton
+            onClick={() => setShowMenu(!showMenu)}
+            style={{ zIndex: 200 }}
+         >
+            <MenuIcon />
+         </IconButton>
 
          <Navigation className={`navigation ${showMenu ? 'show' : ''}`}>
-            <CloseButton onClick={() => setShowMenu(!showMenu)}>XX</CloseButton>
+            {/* <CloseButton
+               onClick={() => setShowMenu(!showMenu)}
+               style={{ zIndex: 200 }}
+            >
+               <CloseIcon />
+            </CloseButton> */}
             <NavLinks />
          </Navigation>
-
       </div>
    )
 }

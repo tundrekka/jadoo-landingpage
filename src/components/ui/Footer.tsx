@@ -6,7 +6,8 @@ import { NavColumns } from "./NavColumns"
 import { OutBound } from "./OutBound"
 
 const FooterStyles = styled.footer`
-   margin-top: 8rem;
+   /* margin-top: 11.2rem; */
+   margin-bottom: 5rem;
    .Grid-container > div {
       margin-bottom: 3.5rem !important;
       text-align: center;
@@ -21,7 +22,7 @@ const FooterStyles = styled.footer`
       ${MUI_MQuery.md`
          top: -22px;
          & > * {
-            max-width: 90%;
+            max-width: 83%;
          }
       `}
    }

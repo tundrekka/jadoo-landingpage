@@ -1,0 +1,8 @@
+declare module 'react-reveal/LightSpeed'
+declare module 'react-reveal/globals'
+declare module 'react-reveal/HeadShake'
+declare module 'react-reveal/Flash' 
+declare module 'react-reveal/Roll' 
+declare module 'react-reveal/Zoom' 
+declare module 'react-reveal/Fade' 
+declare module 'react-reveal' 

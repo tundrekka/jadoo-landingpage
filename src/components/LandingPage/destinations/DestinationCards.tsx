@@ -5,6 +5,7 @@ import { CountryCard } from './Card'
 
 const CustomGrid = styled(Grid)`
    justify-content: center;
+   margin-top: 2.5rem;
    ${MUI_MQuery.md(css`
       justify-content: space-between;
    `)}

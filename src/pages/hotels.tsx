@@ -1,12 +1,11 @@
-import { Layout } from 'components/layout/Layout'
 import { NextPage } from 'next'
 
 
 const Hotels: NextPage = () => {
    return (
-      <Layout>
-         Hotels
-      </Layout>
+      <div>
+         <h2 style={{marginTop: '3rem', textAlign: 'center'}}>Hotels</h2>
+      </div>
    )
 }
 

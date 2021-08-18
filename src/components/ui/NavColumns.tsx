@@ -46,8 +46,8 @@ export const NavColumns: React.FC = () => {
             <Title>Company</Title>
             <List>
                <li><a>About</a></li>
-               <li>Careers</li>
-               <li>Mobile</li>
+               <li><a>Careers</a></li>
+               <li><a>Mobile</a></li>
             </List>
          </Grid>
          <Grid item xs={6} sm={4}>

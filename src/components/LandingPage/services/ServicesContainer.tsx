@@ -48,7 +48,7 @@ const OrangeS = styled.div`
 `
 
 const Title = styled.h4`
-   font-family: OpenSans;
+   font-family: 'Open Sans';
    font-weight: 600;
    font-size: 1.25rem;
    line-height: 1.688rem;
@@ -89,7 +89,7 @@ export const ServicesContainer: React.FC = () => {
          <Grid item xs={12} sm={6} md={3}>
             <Card>
                <Box className="icon">
-                  <NextImg src="/static/services-imgs/satellite.png" width={92} height={78} />
+                  <NextImg alt="Satellite icon" src="/static/services-imgs/satellite.png" width={92} height={78} />
                </Box>
                <Title>Calculated Weather</Title>
                <Desc>
@@ -111,7 +111,7 @@ export const ServicesContainer: React.FC = () => {
          <Grid item xs={12} sm={6} md={3}>
             <Card>
                <Box className="icon">
-                  <NextImg src="/static/services-imgs/microphone.png" width={67} height={75} />
+                  <NextImg alt="Microphone icon" src="/static/services-imgs/microphone.png" width={67} height={75} />
                </Box>
                <Title>Local Events</Title>
                <Desc>
@@ -123,7 +123,7 @@ export const ServicesContainer: React.FC = () => {
          <Grid item xs={12} sm={6} md={3}>
             <Card style={{ justifySelf: 'center' }}>
                <Box className="icon">
-                  <NextImg src="/static/services-imgs/customization.png" width={77} height={66} />
+                  <NextImg alt="Gear icon" src="/static/services-imgs/customization.png" width={77} height={66} />
                </Box>
                <Title>Customization</Title>
                <Desc>
@@ -134,39 +134,3 @@ export const ServicesContainer: React.FC = () => {
       </Grid>
    )
 }
-
-/* <div style={{position: 'relative', alignSelf: 'stretch'}}>
-            <ActiveItem>
-               <Box className="icon">
-                   <Icon src="/static/services-imgs/planeCategory.png" />
-               </Box>
-               <Title>Best Flights</Title>
-               <Desc>
-                  Engrossed listening. Park gate sell they west hard for the.
-               </Desc>
-            </ActiveItem>
-            <OrangeS></OrangeS>
-         </div>
-         <div>
-            <Card>
-               <Box className="icon">
-                  <Icon src="/static/services-imgs/microphone.png" />
-               </Box>
-               <Title>Local Events</Title>
-               <Desc>
-                  Barton vanity itself do in it. Preferd to men it engrossed
-                  listening.
-               </Desc>
-            </Card>
-         </div>
-         <div>
-            <Card style={{justifySelf: 'center'}}>
-               <Box className="icon">
-                  <Icon src="/static/services-imgs/customization.png" />
-               </Box>
-               <Title>Customization</Title>
-               <Desc>
-                  We deliver outsourced aviation services for military customers
-               </Desc>
-            </Card>
-         </div> */

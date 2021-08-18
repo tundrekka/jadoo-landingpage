@@ -1,8 +1,9 @@
 import { IconButton } from '@material-ui/core'
 import { KeyboardArrowDown, KeyboardArrowUp } from '@material-ui/icons'
 import styled from 'styled-components'
+import { MUI_MQuery } from 'theme/breakpoints'
 import { IUserTestimonial } from './Testimonial'
-
+import NextImg from 'next/image'
 const CardContainer = styled.div`
    /* border: 1px solid black; */
    margin-bottom: 5rem;
@@ -22,10 +23,14 @@ const CardContainer = styled.div`
    font-family: Poppins;
    color: ${({ theme }) => theme.palette.text_clr};
    .content {
-      padding: 72px;
+      padding: 1.875rem;
       padding-top: 0;
-      padding-bottom: 30px;
+      
+      padding-bottom: 1.875rem;
       max-width: 420px;
+      ${MUI_MQuery.sm`
+         padding: 4.5rem;
+      `}
       .opinion {
          margin-bottom: 30px;
          margin-top: 0;
@@ -59,11 +64,9 @@ const MainCard = styled.div`
    }
 `
 
-//TODO problems with bottom in %
 const PreviewNextTestimonial = styled.div`
    position: absolute;
 
-   /* TODO problems with bottom in % */
    bottom: -80px;
    right: -31px;
    border: 1.5px solid #e7e7e7d7;
@@ -101,11 +104,11 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({userTestimonial
          <MainCard>
             <div className="principalCard">
                <div className="img-container">
-                  <img
-                     width="68"
-                     height="68"
+                  <NextImg
+                     width={68}
+                     height={68}
                      src="/static/testimonial/testimonial.png"
-                     alt=""
+                     alt="user image"
                   />
                </div>
                <div className="content">

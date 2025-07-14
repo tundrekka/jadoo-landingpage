@@ -8,11 +8,11 @@
     "dev-local": "next -H 192.168.0.102"
   },
   "dependencies": {
-    "@material-ui/core": "^4.12.3",
-    "@material-ui/icons": "^4.11.2",
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
     "next": "latest",
     "react": "^17.0.2",
-    "react-bootstrap": "^2.0.0-beta.4",
+    "react-bootstrap": "^2.0.0",
     "react-dom": "^17.0.2",
     "react-is": "^17.0.2",
     "react-reveal": "^1.2.2",
